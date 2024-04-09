@@ -17,7 +17,13 @@ public class InsertionSort {
     }
 
     /**
-     * In dieser Methode wird erstmal der Wert "keyValue", der den aktuellen Wert darstellt, ausgewählt.
+     * In dieser Methode wird die gegebene ArrayList mithilfe von InsertionSort aussortiert.
+     *
+     * Die erste Schleife iteriert über die elemente der Liste, beginnend mit dem zweiten
+     * Element (i=1 / Index 1) bis zum letzten Element (list.size()-1).
+     *
+     * Die zweite Schleie (innere Schleife) iteriert rückwärts durch den bereits
+     * sortierten Teil der Liste, beginnend mit dem Element direkt vor dem aktuellen Element.
      *
      * @param list
      */
