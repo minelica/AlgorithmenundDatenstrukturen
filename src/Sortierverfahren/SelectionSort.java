@@ -10,7 +10,7 @@ public class SelectionSort {
     public static ArrayList<Integer> list = new ArrayList<>();
 
     /**
-     * Diese Methode führt das Programm auf.
+     * Diese Methode führt das Programm aus.
      *
      * @param args
      */
@@ -39,11 +39,14 @@ public class SelectionSort {
                     smallestIndex = j;
                 }
             }
-            if (smallestIndex != i) {
-                //    swap(i, smallestIndex);
+            if (smallestIndex != i) {   // Austauschstelle nötig
+                swap(list, i, smallestIndex);
+            /*
+            --- falls man keine swap-Methode verwenden möchte ---
                 int temp = list.get(i);
                 list.set(i, list.get(smallestIndex));
                 list.set(smallestIndex, temp);
+             */
             }
         }
     }
@@ -51,13 +54,14 @@ public class SelectionSort {
     /**
      * Diese Methode vertauscht zwei Elemente in der Liste.
      *
+     * @param list
      * @param position1 -> das erste zu vertauschende Element
      * @param position2 -> das zweite zu vertauschende Element
      */
-    private static void swap(int position1, int position2) {
+    private static void swap(ArrayList<Integer> list, int position1, int position2) {
         int temp = list.get(position1);
         list.set(position1, list.get(position2));
-        list.set(position1, temp);
+        list.set(position2, temp);
     }
 
     /**
